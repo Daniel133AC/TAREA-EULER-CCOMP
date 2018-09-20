@@ -87,14 +87,21 @@ int main(){
 
     cout<<"Problema 5"<<endl;
     int sip=false;
+    int cont5=0;
     int i2=20;
-    int i3=1;
     int num3;
+    int i3=1;
     while(sip==false){
-        if(i2%1==0&&i2%2==0&&i2%3==0&&i2%4==0&&i2%5==0&&i2%7==0&&i2%8==0&&i2%10==0&&i2%11==0&&i2%13==0&&i2%16==0&&i2%17==0&&i2%18==0&&i2%19==0&&i2%20==0){
+        for(;i3<=20;i3++){
+            if(i2%i3==0){
+                cont5++;}}
+        if(cont5==20){
             sip=true;
-            i2--;}
+            i2--;
+        }
+        cont5=0;
         i2++;
+        i3=1;
     }
     cout<<"El menor numero que es divisible por los numeros del 1 al 20 es: "<<i2<<endl<<endl;
 
